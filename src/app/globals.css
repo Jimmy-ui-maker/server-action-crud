@@ -1,0 +1,84 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: rgba(0, 128, 0, 0.244);
+}
+
+.coverPage {
+  background: url("/hero-bg.jpg");
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 128, 0, 0.244);
+}
+
+/*Welcome Page section*/
+.coverPage h1,
+p {
+  color: #2f4d5a;
+}
+.coverPage p {
+  color: #67b0d1;
+}
+.coverPage a {
+  background-color: #67b0d1;
+  color: #2f4d5a;
+}
+
+.coverPage a:hover {
+  color: #67b0d1;
+}
+
+/*Todos  section*/
+.todoRecords .card {
+  background-color: inherit;
+}
+.todoRecords .card{
+  height: 25vh;
+}
+
+/*Add Todo section*/
+.add-todo .card {
+  background-color: inherit;
+}
+.add-todo input {
+  background-color: rgba(0, 128, 0, 0.094);
+}
+.add-todo textarea {
+  background-color: rgba(0, 128, 0, 0.094);
+}
+
+.add-todo a:hover {
+  background-color: rgba(0, 128, 0, 0.094);
+}
+.add-todo button:hover {
+  background-color: rgba(0, 128, 0, 0.094);
+}
+
+/*Update section*/
+.update-todo .card {
+  background-color: inherit;
+}
+.update-todo input {
+  background-color: rgba(0, 128, 0, 0.094);
+}
+.update-todo textarea {
+  background-color: rgba(0, 128, 0, 0.094);
+}
+
+.update-todo button:hover {
+  background-color: rgba(0, 128, 0, 0.094);
+}
+
+#all-cards .card {
+  height: 30vh;
+  background-color: inherit;
+}
+
+#all-cards .card .card-body {
+  height: 10vh;
+  background-color: inherit;
+}
