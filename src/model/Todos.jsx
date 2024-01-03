@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URL);
 
 const todoSchema = new mongoose.Schema({
   title: {
@@ -15,40 +15,7 @@ const todoSchema = new mongoose.Schema({
   },
 });
 
-const productSchema = new mongoose.Schema(
-  {
-    title: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    desc: {
-      type: String,
-      required: true,
-    },
-    price: {
-      type: Number,
-      required: true,
-      min: 0,
-    },
-    stock: {
-      type: Number,
-      required: true,
-      min: 0,
-    },
-    img: {
-      type: String,
-    },
-    color: {
-      type: String,
-    },
-    size: {
-      type: String,
-    },
-  },
-  { timestamps: true }
-);
+
 
 export default mongoose.models.Todos || mongoose.model("Todos", todoSchema);
 
-export const Product = mongoose.models.Product || mongoose.model("Product", productSchema);

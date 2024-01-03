@@ -12,6 +12,7 @@ export default async function TodoRecords() {
       <div className="row g-4 text-center  align-items-center mt-4">
         <h1 className=" text-success">Todos Page</h1>
         <hr />
+        {/**
         <div className="container d-flex justify-content-center my-2">
           <div className="col-lg-6 col-8  p-1 rounded-3">
             <Link
@@ -44,6 +45,7 @@ export default async function TodoRecords() {
             </div>
           </div>
         ))}
+         */}
       </div>
     </div>
   );
