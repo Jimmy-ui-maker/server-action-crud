@@ -1,12 +1,9 @@
-
 import { redirect } from "next/navigation";
-import dbConnect from "@/app/dbConnect";
 import Todos from "@/model/Todos";
 import Link from "next/link";
 
 export default async function Edit({ params }) {
-  dbConnect();
-  const notes = await Todos.findOne({ _id: params.id });
+  const todos = await Todos.findOne({ _id: params.id });
 
   async function updateTodo(data) {
     "use server";
@@ -36,7 +33,7 @@ export default async function Edit({ params }) {
                       type="text"
                       name="title"
                       className="text-success form-control shadow-none"
-                      defaultValue={notes?.title}
+                      defaultValue={todos?.title}
                     />
                   </div>
                   <div>
@@ -47,11 +44,11 @@ export default async function Edit({ params }) {
                       name="note"
                       rows="3"
                       className="text-success form-control shadow-none"
-                      defaultValue={notes?.note}
+                      defaultValue={todos?.note}
                     ></textarea>
                   </div>
                   <div className=" d-flex justify-content-center">
-                  <Link
+                    <Link
                       href={"/cards"}
                       className="text-success fw-semibold mt-4 btn border-success mx-4"
                     >

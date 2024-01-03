@@ -26,6 +26,12 @@ export default function CoverPage() {
               >
                 View Todo
               </Link>
+              <Link
+                className=" fw-bold   btn border-info"
+                href={"/crudls"}
+              >
+                New Page
+              </Link>
             </div>
           </div>
         </div>

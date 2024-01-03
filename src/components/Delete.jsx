@@ -1,14 +1,14 @@
-const mongoose = require("mongoose");
+import Todos from "@/model/Todos";
 import { redirect } from "next/navigation";
-import Note from "../model/Todos";
 
 export default async function Delete(props) {
   const id = props.id;
-  await mongoose.connect(process.env.MONGODB_URI);
+  //await mongoose.connect(process.env.MONGODB_URI);
 
   async function deleteTodo() {
     "use server";
-    await Note.deleteOne({ _id: id });
+
+    await Todos.deleteOne({ _id: id });
     redirect("/cards");
   }
   return (

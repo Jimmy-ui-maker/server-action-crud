@@ -1,10 +1,8 @@
-import dbConnect from "@/app/dbConnect";
 import Delete from "@/components/Delete";
 import Todos from "@/model/Todos";
 import Link from "next/link";
 
 export default async function Details({ params }) {
-  dbConnect();
   const todos = await Todos.findOne({ _id: params.id });
 
   {
@@ -46,6 +44,9 @@ async function deleteNote(data) {
                     href={`/Edit/${todos._id}`}
                   >
                     Edit
+                  </Link>
+                  <Link className="btn btn-outline-success" href="/cards">
+                    Back
                   </Link>
                 </div>
               </div>
